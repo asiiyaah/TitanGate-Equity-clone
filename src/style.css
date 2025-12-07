@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Fellix1';
+  src: url('Fellix-Medium.woff2') format('woff2');
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Fellix1';
+}
+button , p , a , li {
+  font-family: Fellix1 !important;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: palegreen;
+  width: 100vw; 
+
+}
+.navbar button{
+  text-transform: capitalize;
+}
+
+.main-logo{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.nav2{
+  display: flex;
+  gap:15px; 
+  list-style: none;
+  width: 40vw;
+  border: 1px solid rgb(114, 114, 110);
+  justify-content: space-around;
+}
+main h1{
+  line-height:1;
+  font-size: 6vw;
+}
+main p{
+  font-size: 15px;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  color: white;
+  text-align:center;
+  justify-content: center;
+  align-items: center ;
+}
+.first{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.End{
+  font-size: 20px;
+  color: rgb(61, 63, 70);
+  padding-bottom: 35px;
+  text-align: center;
+}
+.End span{
+    font-size: 20px;
+    color: white;
+}
+
+.first .bg-vid{
+  z-index: -1;
+  width: 500vw;
+  height: 100vh;
+  position: absolute;
+}
