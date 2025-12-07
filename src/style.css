@@ -6,7 +6,17 @@
 
 @font-face {
   font-family: 'Fellix1';
-  src: url('Fellix-Regular.woff2') format('woff2');
+  src: url('/Fellix-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fellix2';
+  src: url("/Fellix-Medium.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'PP';
+  src: url("/PP.ttf") format('truetype');
 }
 
 body {
@@ -15,12 +25,6 @@ body {
   font-family: 'Fellix1';
 }
 
-button,
-p,
-a,
-li {
-  font-family: Fellix1 !important;
-}
 
 .navbar {
   display: flex;
@@ -33,20 +37,21 @@ li {
 
 .navbar button {
   transform: translateX(-35px) translateY(40px);
-  width: 13vw;
-  letter-spacing: 2px;
+  letter-spacing: .2rem;
   display: flex;
+  padding: 15px;
   justify-content: center;
   background-color: rgba(43, 42, 42, 0.733);
   border: 1px solid rgba(43, 42, 42, 0.733);
   gap: 10px;
-  font-size: 15px;
+  font-size: 12px;
   align-items: center;
   color: white;
   height: 5vh;
+  font-family: 'PP';
 }
 
-div +  p {
+div+p {
   font-size: 40px;
 }
 
@@ -62,12 +67,16 @@ div +  p {
   display: flex;
   gap: 5px;
   list-style: none;
-  width: 35vw;
   justify-content: space-around;
   background-color: rgba(43, 42, 42, 0.733);
   border: 1px solid rgba(43, 42, 42, 0.733);
   align-items: center;
   height: 35px;
+  font-family: 'PP';
+  font-weight: 300;
+  letter-spacing: .2rem;
+  font-size: 12px;
+  padding: 0 2rem;
 }
 
 main h1 {
@@ -76,7 +85,9 @@ main h1 {
 }
 
 main p {
-  font-size: 15px;
+  font-size: 20px;
+  letter-spacing: .2rem;
+  font-family: 'PP';
 }
 
 .main {
@@ -87,6 +98,11 @@ main p {
   text-align: center;
   justify-content: center;
   align-items: center;
+
+  h1 {
+    font-weight: 400;
+
+  }
 }
 
 .first {
@@ -98,16 +114,20 @@ main p {
   position: relative;
 }
 
-.End {
+.End h3 {
   font-size: 20px;
   color: rgb(61, 63, 70);
   padding-bottom: 35px;
   text-align: center;
+  background: -webkit-linear-gradient(180deg, rgb(61, 63, 70), #c0c0c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.End span {
+.End h3 span {
   font-size: 20px;
   color: white;
+  -webkit-text-fill-color: white;
 }
 
 .first .bg-vid {
@@ -116,4 +136,82 @@ main p {
   object-fit: cover;
   height: 100vh;
   position: absolute;
+}
+
+.second {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: black;
+}
+
+.bg-vid1 {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main1 h1 {
+  font-size: 100px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  line-height: .9;
+}
+
+.main1 h1 span {
+  background: -webkit-linear-gradient(180deg, rgb(61, 63, 70), #c0c0c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.svg1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.third {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+
+.bg-vid1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  video {
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+  }
+}
+
+.main2{
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  font-size: 35px;
+  line-height: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+    color: white;
+  font-weight:100;
 }
